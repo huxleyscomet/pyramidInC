@@ -1,19 +1,16 @@
 #include <stdio.h>
-
 int main() {
-    int r;
-    printf("Please enter the number of rows.");
-    scanf_s("%d", &r);
-
-    for (int i = 1; i <= r; i++) {
-        for (int j = 1; j <= r - i; j++) {
-            printf(" ");
-        }
-        for (int j = 1; j <= i * 2 - 1; j++) {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    return 0;
+	int height;
+	printf("Please enter an integer value for the height of the pyramid> ");
+	scanf("%d", &height);
+	for (int i = 0; i < height; i++) {
+		for (int j = height-i; j > 0; j--) {
+			printf(" ");
+		}
+		printf("/");
+		for (int k = 0; k < i*2; k++) {
+			printf("*");
+		}
+		printf("\\\n");
+	}
 }
